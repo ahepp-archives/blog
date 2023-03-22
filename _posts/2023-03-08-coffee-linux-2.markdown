@@ -12,9 +12,6 @@ In this post, we'll discuss the hardware modifications necessary to support any 
 * If you make a mistake you could kill yourself or set your house on fire
 * It is critically important that the power supply be protected from contacting anything conductive
 
-You could power the controller externally with a UL rated power supply and avoid messing with the power supply.
-Even if you do that, this is still not a safe project.
-
 ## Equipment
 
 Amazon links have a way of redirecting to the wrong version of the product.
@@ -30,12 +27,16 @@ I've attempted to provide enough information to verify any parts you order are s
 * [piggyback spade terminals](https://www.amazon.com/gp/product/B08DCRRL2J)
 * raspberry pi zero w and SD card
 * [raspbery pi terminal hat](https://www.amazon.com/gp/product/B09MFB6PJH)
-* [power supply, 120V AC to 5V 3A DC](https://www.amazon.com/gp/product/B07FMZ3Z2K)
+* [power supply, 120V AC to 5V DC](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)
 * [mcp9600 thermocouple adc](https://www.sparkfun.com/products/16294)
 * [qwiic to male pin cable](https://www.sparkfun.com/products/14425)
 * [m4 threaded type K thermocouple](https://www.amazon.com/gp/product/B07M9CB99F)
 
 This is just the equipment I used.
+
+Most of these pictures were taken with a different power supply.
+I replaced the original with one that has more secure terminal connections.
+
 Any Linux SBC should work about as well as another here.
 Likewise the software I wrote (which I'll cover in a later post!) uses the Linux IndustrialIO driver subsystem, so a wide variety of common temperature sensors should be easy to support.
 
