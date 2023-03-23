@@ -67,4 +67,6 @@ To prove we can do a lot better than the stock thermostat at the start of the po
 
 ![image](https://s3.hepp.cloud/public/ahepp/blog/assets/2023/03/initial_pid_plot.png)
 
-In the next post, I'll share diagrams and photos to help you understand the electrical systems and how things are wired up, along with a list of equipment used.
+In the [next post][next-post], I'll share diagrams and photos to help you understand the electrical systems and how things are wired up, along with a list of equipment used.
+
+[next-post]: /2023/03/08/coffee-linux-2.html
