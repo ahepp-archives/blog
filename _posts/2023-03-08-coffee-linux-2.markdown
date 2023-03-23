@@ -12,9 +12,6 @@ In this post, we'll discuss the hardware modifications necessary to support any 
 * If you make a mistake you could kill yourself or set your house on fire
 * It is critically important that the power supply be protected from contacting anything conductive
 
-You could power the controller externally with a UL rated power supply and avoid messing with the power supply.
-Even if you do that, this is still not a safe project.
-
 ## Equipment
 
 Amazon links have a way of redirecting to the wrong version of the product.
@@ -27,14 +24,19 @@ I've attempted to provide enough information to verify any parts you order are s
 * [crimpers](https://www.amazon.com/gp/product/B07GFXHH91)
 * [spade terminals](https://www.amazon.com/gp/product/B07KYMNZMX)
 * [fork terminals](https://www.amazon.com/gp/product/B08B5WHTHW)
+* [piggyback spade terminals](https://www.amazon.com/gp/product/B08DCRRL2J)
 * raspberry pi zero w and SD card
 * [raspbery pi terminal hat](https://www.amazon.com/gp/product/B09MFB6PJH)
-* [power supply, 120V AC to 5V 3A DC](https://www.amazon.com/gp/product/B07FMZ3Z2K)
+* [power supply, 120V AC to 5V DC](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)
 * [mcp9600 thermocouple adc](https://www.sparkfun.com/products/16294)
 * [qwiic to male pin cable](https://www.sparkfun.com/products/14425)
 * [m4 threaded type K thermocouple](https://www.amazon.com/gp/product/B07M9CB99F)
 
 This is just the equipment I used.
+
+Most of these pictures were taken with a different power supply.
+I replaced the original with one that has more secure terminal connections.
+
 Any Linux SBC should work about as well as another here.
 Likewise the software I wrote (which I'll cover in a later post!) uses the Linux IndustrialIO driver subsystem, so a wide variety of common temperature sensors should be easy to support.
 
@@ -82,9 +84,13 @@ I didn't bother with new thermal paste on the thermocouple, in part because I wa
 
 ## Connect the power supply
 
+![image](https://s3.hepp.cloud/public/ahepp/blog/assets/2023/03/gaggia_modified_power_switch.jpeg){: width="350"}
+
 * Cut two 12" 14 gauge wires
-* Terminate one end of each wire with an insulated female spade connector
-* (1, internal) Connect the female spades to the main power switch
+* Terminate one end of each wire with a piggyback spade connector
+* (1, internal) Remove the female spades from the bottom terminals on the main power switch
+* Connect the female spades to the piggyback spades
+* Connect the piggyback spades to the bottom terminals of the main power switch
 * (1, external) Connect the wires to the power supply input
 * Cut two 6" 22 gauge wires
 * (2, external) Connect the power supply output to the Pi 5v and ground
